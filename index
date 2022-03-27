@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('ce71a89298ce0b7d208fc505f2d4f5e8');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '상훈♡혜리 결혼합니다.',
+        description: '2022년 5월 1일 일요일 오후 2시　　　　
+관악문화예절원',
+        imageUrl:
+          'https://postfiles.pstatic.net/MjAyMjAzMjdfNDIg/MDAxNjQ4MzkyNjIxMDgy.VEmnxlXLT3xMU_Szjy1Ld1eiWhHsgFabZsdi0h4r_gog.5DkJnqB4OzxSGNYQlAoYRZKGBAgYI7zYT48hewZbkxog.JPEG.wangchacha/03.jpg?type=w773',
+        link: {
+          mobileWebUrl: 'https://barunsonmcard.com/m/May_0501',
+          webUrl: 'https://barunsonmcard.com/m/May_0501',
+        },
+      buttons: [
+        {
+          title: '모바일청첩장보기',
+          link: {
+            mobileWebUrl: 'https://barunsonmcard.com/m/May_0501',
+            webUrl: 'https://barunsonmcard.com/m/May_0501',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
